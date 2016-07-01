@@ -1,5 +1,5 @@
 .DS_Store
-.idea/shelf
+.idea/
 /confluence/target
 /dependencies
 /dist
@@ -19,3 +19,4 @@ ultimate/out
 ultimate/tmp
 ultimate/workspace.xml
 ultimate/*.versionsBackup
+*.iml

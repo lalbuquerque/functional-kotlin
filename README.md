@@ -1,1 +1,1 @@
-# functional-kotlin
+# :man: functional-kotlin

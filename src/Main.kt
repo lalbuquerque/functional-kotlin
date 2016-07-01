@@ -1,8 +1,9 @@
+import data.Location
 import java.util.*
 
 /**
- * Created by lalbuquerque on 6/30/16.
- */
+* Created by lalbuquerque on 6/30/16.
+*/
 
 fun main(args: Array<String>) {
     val list = ArrayList<Int>()
@@ -11,13 +12,17 @@ fun main(args: Array<String>) {
     list.add(3)
     list.add(4)
 
-    println(plus1(list))
-}
+    println("plus1 -> " + plus1(list))
 
-/**
- * Adds 1 to each element of a given List<Int>
- */
-fun plus1(intList: List<Int>) : List<Int> {
-    if (intList.size == 0) return emptyList()
-    return intList.map { it + 1 }
+    // ----------------------------
+
+    val tempList = ArrayList<Int>()
+    tempList.add(75)
+    tempList.add(75)
+    tempList.add(75)
+    tempList.add(75)
+    tempList.add(75)
+
+    val loc = Location("Funky Town", 1000000,tempList)
+    println("locationToCoordinates -> " + locationToCoordinates(loc))
 }

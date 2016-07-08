@@ -15,13 +15,22 @@ fun plus1(intList: List<Int>) : List<Int> {
 }
 
 /**
- * Transforms an object with temperatures and population into a coordinates (x, y) map
+ * Transforms a location object into a coordinates (x, y) map
+ *
+ * TODO: Turn it more readable
  */
-fun locationToCoordinates(location: Location) : Map<Int, Int> {
-    // TODO: Split it in N minor functions (make it funKTionale)
-    val averageTemperature = location.temperatures.reduce { a, i -> a + i } / location.temperatures.size
-    var coordinates = HashMap<Int, Int>()
-    coordinates.put(averageTemperature, location.population)
-    return coordinates
+fun locationToCoordinates(location: Location) = toMap(location.temperatures.sum().div(location.temperatures.size), location.population)
+
+/**
+ * Returns a map with the informed key and value
+ * */
+fun <K, V> toMap(k: K, v: V) : Map<K, V> {
+    val map = HashMap<K, V>()
+    map.put(k, v)
+    return map
 }
 
+/**
+ * Sums all the items in the list
+ */
+fun List<Int>.sum() = this.reduce { a, i -> a + i }

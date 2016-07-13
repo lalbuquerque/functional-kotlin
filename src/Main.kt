@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     list.add(3)
     list.add(4)
 
-    println("plus1 -> " + plus1(list))
+    println("plus1: " + plus1(list))
 
     // ----------------------------
 
@@ -24,5 +24,20 @@ fun main(args: Array<String>) {
     tempList.add(75)
 
     val loc = Location("Funky Town", 1000000,tempList)
-    println("locationToCoordinates -> " + locationToCoordinates(loc))
+    println("locationToCoordinates: " + locationToCoordinates(loc))
+
+    // -----------------------------
+
+    print("infix .p(): ")
+    println(2 p 2)
+
+    // -----------------------------
+
+    val sum = delayedSum(2, 4)
+
+    println("delayedSum() call: " + sum)
+
+    println("sum() call: " + sum())
+
+    // -----------------------------
 }
